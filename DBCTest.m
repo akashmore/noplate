@@ -1,0 +1,15 @@
+javaaddpath([matlabroot,'/java/jarext/mysql-connector-java-5.0.8-bin.jar']);
+clc;
+close all;
+database('wcewle8w_image','wcewle8w_npr','619619champ','com.mysql.jdbc.Driver','jdbc:mysql://192.185.129.7:3306/wcewle8w_image');
+conn = database('wcewle8w_image','wcewle8w_npr','619619champ','com.mysql.jdbc.Driver','jdbc:mysql://192.185.129.7:3306/wcewle8w_image');
+sqlquery ='select * from vehicle';
+curs=exec(conn,sqlquery);
+curs=fetch(curs);
+v=curs.Data;
+imgnm=v{1,2};
+imgpath='http://wcewlug.org/NPR/uploads/';
+getimg=strcat(imgpath,imgnm);
+disp(getimg);
+i=imread(getimg);
+imshow(i);

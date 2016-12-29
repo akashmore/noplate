@@ -1,0 +1,9 @@
+clc;
+clear all;
+javaaddpath([matlabroot,'/java/jarext/mysql-connector-java-5.0.8-bin.jar'])
+database('image','root','619619champ','com.mysql.jdbc.Driver','jdbc:mysql://localhost:3306/image')
+conn = database('noplate','root','619619champ','com.mysql.jdbc.Driver','jdbc:mysql://localhost:3306/im');
+sqlquery ='select * from vehicle';
+curs =exec(conn,sqlquery)
+curs = fetch(curs)
+curs.Data
