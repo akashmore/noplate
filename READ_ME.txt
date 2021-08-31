@@ -1,5 +1,3 @@
-Please send me your feedback about the coding since I am a very beginner. Any mistake or run time error occurred please let me know through my email ID
-rehan.qadir@ymail.com
 
 PROCEDURE TO RUN:
 1. I have tested the algorithm on MATLAB Version 7.13.0.564 (R2011b). Hope the algorithm will work on higher versions for sure and for lesser not guaranteed.
